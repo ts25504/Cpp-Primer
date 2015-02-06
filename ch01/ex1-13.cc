@@ -20,6 +20,13 @@ void ex1_11()
     int left = 0, right = 0;
 
     std::cin >> left >> right;
+    if (left > right)
+    {
+        int temp = left;
+        left = right;
+        right = temp;
+    }
+
     for (int i = left; i <= right; ++i)
         std::cout << i << std::endl;
 }
