@@ -1,3 +1,7 @@
+/*
+ * Exercise 1.6: Explain whether the following program fragment is legal.
+ */
+
 #include <iostream>
 
 int main()

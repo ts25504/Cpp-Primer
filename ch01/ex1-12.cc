@@ -1,3 +1,8 @@
+/*
+ * Exercise 1.12: What does the following for loop do? What is the final
+ * value of sum?
+ */
+
 #include <iostream>
 
 int main()
