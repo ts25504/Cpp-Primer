@@ -1,3 +1,7 @@
+/*
+ * Exercise 2.10: What are the initial values, if any, of each of the following variables?
+ */
+
 #include <iostream>
 #include <string>
 

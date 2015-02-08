@@ -1,3 +1,7 @@
+/*
+ * Exercise 2.17: What does the following code print?
+ */
+
 #include <iostream>
 
 int main()

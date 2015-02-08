@@ -1,3 +1,7 @@
+/*
+ * Exercise 2.14: Is the following program legal? If so, what values are printed?
+ */
+
 #include <iostream>
 
 int main()
