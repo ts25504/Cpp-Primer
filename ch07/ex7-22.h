@@ -1,16 +1,23 @@
 /*
- * Exercise 7.9: Add operations to read and print Person objects to the code you wrote for the exercises in § 7.1.2 (p. 260).
+ * Exercise 7.22: Update your Person class to hide its implementation.
  */
 
-#ifndef EX_7_9_H
-#define EX_7_9_H
+#ifndef EX_7_22_H
+#define EX_7_22_H
 
 #include <string>
 #include <iostream>
 
-struct Person {
+class Person {
+    friend std::istream& read(std::istream& is, const Person& person);
+    friend std::ostream& print(std::ostream& os, const Person& person);
+public:
+    Person() = default;
+    Person(const std::string& n, const std::string& a) : name(n), address(a) { }
+    Person(std::istream& is) { read(is, *this); }
     std::string get_name() const { return name };
     std::string get_address() const { return address };
+private:
     std::string name;
     std::string address;
 };

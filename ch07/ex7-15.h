@@ -8,14 +8,13 @@
 #include <string>
 #include <iostream>
 
-class Person {
-public:
+struct Person {
     Person() = default;
     Person(const std::string& n, const std::string& a) : name(n), address(a) { }
     Person(std::istream& is) { read(is, *this); }
     std::string get_name() const { return name };
     std::string get_address() const { return address };
-private:
+
     std::string name;
     std::string address;
 };
