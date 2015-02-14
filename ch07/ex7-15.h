@@ -8,6 +8,9 @@
 #include <string>
 #include <iostream>
 
+struct Person;
+std::istream& read(std::istream& is, const Person& person);
+
 struct Person {
     Person() = default;
     Person(const std::string& n, const std::string& a) : name(n), address(a) { }
