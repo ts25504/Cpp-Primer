@@ -49,6 +49,7 @@ std::ostream& print(std::ostream& os, const Sales_data& item)
 {
     os << item.isbn() << " " << item.units_sold << " "
        << item.revenue << std::endl;
+    return os;
 }
 
 Sales_data::Sales_data(std::istream& is)
