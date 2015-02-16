@@ -4,7 +4,7 @@
  */
 
 #include <iostream>
-#include "../include/Sales_items.h"
+#include "../include/Sales_item.h"
 
 int main()
 {

@@ -9,7 +9,7 @@
 
 bool compareIsbn(const Sales_data& item1, const Sales_data& item2)
 {
-    return item1.isbn() < item2.isbn();
+    return item1.isbn() == item2.isbn();
 }
 
 int main()
