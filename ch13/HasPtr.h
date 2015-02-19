@@ -13,12 +13,15 @@
 #define HasPtr_h
 
 #include <string>
+#include <utility>
 
 class HasPtr {
+    friend void swap(HasPtr& lhs, HasPtr& rhs);
+    friend bool operator<(const HasPtr& lhs, const HasPtr& rhs);
 public:
     HasPtr(const std::string& s = std::string()) :
         ps(new std::string(s)), i(0), use(new std::size_t(1)) { }
-    HasPtr(const HasPtr& rhs) :
+    HasPtr(const HasPtr& hp) :
         ps(new std::string(*hp.ps)), i(hp.i), use(hp.use) { ++use; }
     HasPtr& operator=(const HasPtr& rhs)
     {
@@ -49,4 +52,15 @@ private:
     int i;
 };
 
+inline void swap(HasPtr& lhs, HasPtr& rhs)
+{
+    std::swap(lhs.ps, rhs.ps);
+    std::swap(lhs.i, rhs.i);
+    std::swap(lhs.use, rhs.use);
+}
+
+inline bool operator<(const HasPtr& lhs, const HasPtr& rhs)
+{
+    return *lhs.ps < *rhs.ps;
+}
 #endif
