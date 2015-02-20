@@ -5,8 +5,8 @@
  * ......
  */
 
-#ifndef EX_7_26_H
-#define EX_7_26_H
+#ifndef Sales_data_H
+#define Sales_data_H
 
 #include <string>
 #include <iostream>
@@ -108,10 +108,16 @@ bool operator!=(const Sales_data& lhs, const Sales_data& rhs)
 Sales_data::Sales_data(std::istream& is)
 {
     read(is, *this);
-
+}
 
 inline double Sales_data::avg_price() const
 {
     return units_sold ? revenue / units_sold : 0;
 }
+
+inline bool compareIsbn(const Sales_data &lhs, const Sales_data &rhs)
+{
+    return lhs.isbn() == rhs.isbn();
+}
+
 #endif
